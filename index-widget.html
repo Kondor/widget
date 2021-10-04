@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>virtual-widget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="virtual-mirror-widget" class="fs">
+        <div id="top">
+            <div class="photo" id="showPhoto">
+                <div class="warppingVideo">
+                    <video id="video" autoplay class="yourPhoto objectHide"></video>
+                    <canvas id="canvas" class="yourPhoto objectHide"></canvas>
+                    <canvas id="canvas-2" class = "canvasForElipses objectHide"></canvas>
+                    <canvas id="canvas-3" class = "canvasForElipses objectHide"></canvas>
+                </div>
+                <div class="objectHide" id="textWhileWaitingPhoto">
+                    <p class="waitingForPhotoHead">Allow camera access</p>
+                    <p class="waitingForPhotoDescription">We ask you to enable camera access so you can start trying on glasses.</p>
+                </div>
+                <button class="takeAPhoto toDown" id="getPhoto">
+                    <img alt="photo of person" src="https://cdn-icons-png.flaticon.com/512/83/83574.png" class = "photocameraImg">
+                    <p class="uploadText" id="textOnButton">Upload</p>
+                </button>
+            </div>
+
+            <div class="description" id="info">
+                <p class="fs18 title" id="nameGlasses">Weston Tortoise</p>
+                <img src="https://optimaxdev.github.io/volga-it/assets/images/31-p1996_f.jpg" id="photoGlasses">
+                <div class="title fs16 btn chooseLenses">
+                    Choose Lenses
+                </div>
+                <div class="descr" id="descriptionGlasses">
+                    <p class="title fs16 headingText">
+                        Product Description
+                    </p>
+                    <p class="fulldescr fs12 mainDescription" id="descriptionGlasses">The Weston is a well-rounded frame for a well-rounded individual. Crafted
+                        from premium acetate, it flaunts monel temples and a rich tortoise hue.</p>
+                </div>
+            </div>
+
+            <div class="blockOfTools">
+                <!--TODO Back-->
+                <p class="headerTools">Adjust the Image</p>
+                <ol>
+                    <!--TODO Цифры отдельно от блока p-->
+                    <li><p class="toolsText"><b>1. </b>Drag the RED targets to the center of your eyes.</p></li>
+                    <li><p class="toolsText"><b>2. </b>Drag to reposition photo</p></li>
+                    <li>
+                        <p class="toolsText"><b>3. </b>Set your PD, if you know it.</p>
+                        <!--TODO Знак вопроса-->
+                        <input class="pd" placeholder="62">
+                    </li>
+                    <li><p class="toolsText"><b>4. </b>Adjust the photo with the controls.</p></li>
+                </ol>
+    
+                <p class="changePhotoTxt">Photo size:</p>
+                <input class="rangeInput" id="size" type="range" min="0.5" max="1.5" step="0.05">
+                <p class="changePhotoTxt">Photo rotation:</p>
+                <input class="rangeInput" id="rotation" type="range" min="-45" max="45" step="1">
+            </div>
+
+        </div>
+        <div id="downerContent">
+        <div id="similar">
+            <p class="title fs16">Similar Frames</p>
+            <div class="glasses">
+                <div class="glass clickGlasses" data-glassidx="0">
+                    <img src="https://optimaxdev.github.io/volga-it/assets/images/10033_f_2_1.jpg" id="otherPhoto1" alt=" ">
+                    <p id="otherName1">Elliot Black w/Gold</p>
+                </div>
+                <div class="glass clickGlasses" data-glassidx="1">
+                    <img src="https://optimaxdev.github.io/volga-it/assets/images/10736_f.jpg" id="otherPhoto2" alt="  ">
+                    <p id="otherName2">Ottoto Bellona Tortoise w/Gold</p>
+                </div>
+                <div class="glass clickGlasses" data-glassidx="2">
+                    <img src="https://optimaxdev.github.io/volga-it/assets/images/9493_f.jpg" id="otherPhoto3" alt=" ">
+                    <p id="otherName3">Muse Hopper Tortoise</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="acceptChanges">
+            <button id="tryOnGlasses">Try On Glasses</button>
+            <p>Reset Adjastments</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
